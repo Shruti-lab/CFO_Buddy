@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --color-background: #F7FAFC; /* gray-50 */
+    --color-foreground: #2D3748; /* gray-800 */
+    --color-border: #E2E8F0; /* gray-200 */
+    --color-input: #FFFFFF; /* white */
+    --color-ring: #4FD1C7; /* teal-400 */
+    
+    /* Card Colors */
+    --color-card: #FFFFFF; /* white */
+    --color-card-foreground: #2D3748; /* gray-800 */
+    
+    /* Popover Colors */
+    --color-popover: #FFFFFF; /* white */
+    --color-popover-foreground: #2D3748; /* gray-800 */
+    
+    /* Muted Colors */
+    --color-muted: #F7FAFC; /* gray-50 */
+    --color-muted-foreground: #718096; /* gray-500 */
+    
+    /* Primary Colors */
+    --color-primary: #2C7A7B; /* teal-700 */
+    --color-primary-foreground: #FFFFFF; /* white */
+    
+    /* Secondary Colors */
+    --color-secondary: #D4F1F4; /* teal-100 */
+    --color-secondary-foreground: #2D3748; /* gray-800 */
+    
+    /* Accent Colors */
+    --color-accent: #4FD1C7; /* teal-400 */
+    --color-accent-foreground: #FFFFFF; /* white */
+    
+    /* Success Colors */
+    --color-success: #38A169; /* green-600 */
+    --color-success-foreground: #FFFFFF; /* white */
+    
+    /* Warning Colors */
+    --color-warning: #D69E2E; /* yellow-600 */
+    --color-warning-foreground: #FFFFFF; /* white */
+    
+    /* Error/Destructive Colors */
+    --color-error: #E53E3E; /* red-600 */
+    --color-error-foreground: #FFFFFF; /* white */
+    --color-destructive: #E53E3E; /* red-600 */
+    --color-destructive-foreground: #FFFFFF; /* white */
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .nav-shadow {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-shadow {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .transition-smooth {
+    transition: all 200ms ease-out;
+  }
+  
+  .slide-in {
+    animation: slideIn 300ms ease-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
