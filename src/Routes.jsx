@@ -10,11 +10,12 @@ import Dashboard from './pages/dashboard';
 import InvoiceManagement from './pages/invoice-management';
 import Register from './pages/register';
 import IntegrationSetup from './pages/integration-setup';
+import TestPage from './pages/test-page';
 
 const Routes = () => {
-  // Use the repository name as the basename for GitHub Pages
-  const basename = process.env.NODE_ENV === 'production' ? '/cfo_buddy' : '';
-  
+  // Use the repository name as the basename for GitHub Pages - matches the base in vite.config.mjs
+  const basename = '/cfo_buddy';
+
   return (
     <BrowserRouter basename={basename}>
       <ErrorBoundary>
@@ -29,6 +30,7 @@ const Routes = () => {
         <Route path="/invoice-management" element={<InvoiceManagement />} />
         <Route path="/register" element={<Register />} />
         <Route path="/integration-setup" element={<IntegrationSetup />} />
+        <Route path="/test" element={<TestPage />} />
         <Route path="*" element={<NotFound />} />
       </RouterRoutes>
       </ErrorBoundary>
