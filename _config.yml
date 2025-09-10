@@ -1,0 +1,5 @@
+# Force Jekyll to process this file
+title: CFO Buddy
+description: AI-Powered Financial Forecasting Tool
+baseurl: "/cfo_buddy"
+url: "https://shruti-lab.github.io"
